@@ -6,7 +6,9 @@ const Main = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <div className='pt-24'>
+                <Outlet></Outlet>
+            </div>
         </div>
     );
 };
