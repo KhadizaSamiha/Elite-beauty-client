@@ -1,0 +1,142 @@
+[
+    {
+        "className": "Introduction to Makeup",
+        "teacherName": "Jessica Smith",
+        "price": 100,
+        "availableSeats": 15,
+        "images": "https://i.ibb.co/JjHxr61/6059037-1861.jpg"
+    },
+    {
+        "className": "Advanced Makeup Techniques",
+        "teacherName": "Emily Johnson",
+        "availableSeats": 8,
+        "price": 150,
+        "images": "https://i.ibb.co/vhZhYJD/makeup-brushes-with-whirling-pink-powder.jpg"
+    },
+    {
+        "className": "Hair Styling for Makeup Artists",
+        "teacherName": "Sophia Brown",
+        "price": 80,
+        "availableSeats": 20,
+        "images": "https://i.ibb.co/TBJQC8s/two-attractive-joyful-models-with-stylish-look-having-fun-beauty-salon.jpg"
+    },
+    {
+        "className": "Special Effects Makeup",
+        "teacherName": "Michael Anderson",
+        "price": 200,
+        "availableSeats": 5,
+        "images": "https://i.ibb.co/4Z6VYrK/fashion-beautiful-girl-with-bright-make-up-among-eustomas.jpg"
+    },
+    {
+        "className": "Bridal Makeup",
+        "teacherName": "Olivia Davis",
+        "price": 120,
+        "availableSeats": 10,
+        "images": "https://i.ibb.co/fnf0Y1h/beautiful-face-young-woman-with-maroon-makeup-portrait-gorgeous-girl-with-vinous-lips.jpg"
+    },
+    {
+        "className": "Contouring Techniques",
+        "teacherName": "Sarah Wilson",
+        "price": 90,
+        "availableSeats": 12,
+        "images": "https://i.ibb.co/nw5BJQ3/igor-rand-3-J4-Hyv-V9bw-Y-unsplash.jpg"
+    },
+    {
+        "className": "Fashion Makeup",
+        "teacherName": "Daniel Thompson",
+        "price": 180,
+        "availableSeats": 6,
+        "images": "https://i.ibb.co/GvjPxpb/amy-shamblen-xw-M61-TPMl-Yk-unsplash.jpg"
+    },
+    {
+        "className": "Makeup for Film and Television",
+        "teacherName": "Julia Martinez",
+        "price": 220,
+        "availableSeats": 4,
+        "images": "https://i.ibb.co/nmRD6Tm/noemi-macavei-katocz-zrk7-Wirlxg-M-unsplash.jpg"
+    },
+    {
+        "className": "Airbrush Makeup",
+        "teacherName": "Matthew Roberts",
+        "price": 160,
+        "availableSeats": 7,
+        "images": "https://i.ibb.co/5674xnj/makeup-brush-with-falling-green-powder.jpg"
+    },
+    {
+        "className": "Daytime Makeup",
+        "teacherName": "Amanda White",
+        "price": 75,
+        "availableSeats": 18,
+        "images": "https://i.ibb.co/vD6RPmT/annie-spratt-77r-QJa2-AKh0-unsplash.jpg"
+    },
+    {
+        "className": "Color Theory for Makeup Artists",
+        "teacherName": "Robert Johnson",
+        "price": 110,
+        "availableSeats": 14,
+        "images": "https://i.ibb.co/pPsbFTs/ashley-piszek-cr-Sk-E1-CKQL0-unsplash.jpg"
+    },
+    {
+        "className": "Makeup for Photography",
+        "teacherName": "Sophie Green",
+        "price": 190,
+        "availableSeats": 5,
+        "images": "https://i.ibb.co/zfBWcGc/romina-farias-Sh-AHFTy-HKQ-unsplash.jpg"
+    },
+    {
+        "className": "Makeup for Red Carpet Events",
+        "teacherName": "David Harris",
+        "price": 230,
+        "availableSeats": 3,
+        "images": "https://i.ibb.co/LpFdcr7/qasim-malick-Yh9-Frb-N5-Bts-unsplash.jpg"
+    },
+    {
+        "className": "Ethnic Makeup",
+        "teacherName": "Maria Rodriguez",
+        "price": 140,
+        "availableSeats": 9,
+        "images": "https://i.ibb.co/GvjPxpb/amy-shamblen-xw-M61-TPMl-Yk-unsplash.jpg"
+    },
+    {
+        "className": "Makeup Business Fundamentals",
+        "teacherName": "Benjamin Adams",
+        "price": 150,
+        "availableSeats": 10,
+        "images": "https://i.ibb.co/xjXQJXV/pesce-huang-q1w8-Dt-Gjg7o-unsplash.jpg"
+    },
+    {
+        "className": "Glamour Makeup",
+        "teacherName": "Sophia Thompson",
+        "price": 95,
+        "availableSeats": 15,
+        "images": "https://i.ibb.co/hmMDb0X/laura-chouette-yxc-Cgz-SB-i-I-unsplash.jpg"
+    },
+    {
+        "className": "Makeup for Mature Skin",
+        "teacherName": "Jennifer Brown",
+        "price": 105,
+        "availableSeats": 13,
+        "images": "https://i.ibb.co/M57ZJdh/amir-seilsepour-VLJV46h-PLSM-unsplash.jpg"
+    },
+    {
+        "className": "Theatrical Makeup",
+        "teacherName": "Michael Walker",
+        "price": 210,
+        "availableSeats": 6,
+        "images": "https://i.ibb.co/w74tH4f/peter-kalonji-LH74l-RYv-BY4-unsplash.jpg"
+    },
+    {
+        "className": "Runway Makeup",
+        "teacherName": "Alexandra Davis",
+        "price": 200,
+        "availableSeats": 8,
+        "images": "https://i.ibb.co/nw5BJQ3/igor-rand-3-J4-Hyv-V9bw-Y-unsplash.jpg"
+    },
+    {
+        "className": "Advanced Makeup Technique",
+        "teacherName": "Emilia Johnson",
+        "price": 150,
+        "availableSeats": 9,
+        "images": "https://i.ibb.co/vhZhYJD/makeup-brushes-with-whirling-pink-powder.jpg"
+    }
+]

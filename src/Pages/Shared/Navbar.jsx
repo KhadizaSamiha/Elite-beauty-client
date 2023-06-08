@@ -13,9 +13,10 @@ const Navbar = () => {
         <li className='font-medium text-lg'><Link to='/'>Home</Link></li>
         <li className='font-medium text-lg'><Link to='/instructors'>Instructor</Link></li>
         <li className='font-medium text-lg'><Link to='/classes'>Classes</Link></li>
+        <li className='font-medium text-lg'><Link to='/dashboard'>Dashboard</Link></li>
     </>
     return (
-        <div className="navbar bg-pink-300  bg-opacity-50 h-24 pb-5 lg:px-24">
+        <div className="navbar bg-pink-200 fixed z-10  h-[100px] pb-5 lg:px-24">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
