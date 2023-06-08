@@ -7,7 +7,6 @@ import SocialLogin from "../Shared/SocialLogin";
 
 
 const SignUp = () => {
-    const [password, setShowPassword] = useState(false)
     const navigate = useNavigate();
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
     const { createUser, updateUserProfile } = useContext(AuthContext);
