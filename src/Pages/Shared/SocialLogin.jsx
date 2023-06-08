@@ -19,7 +19,7 @@ const SocialLogin = () => {
     return (
         <div>
             <div className='divider'></div>
-            <button onClick={handleGoogleSignIn} className='btn btn-circle btn-outline'><FaGoogle /></button>
+            <button onClick={handleGoogleSignIn} className='btn btn-circle btn-outline bg-pink-600 border-0 text-white'><FaGoogle /></button>
         </div>
     );
 };

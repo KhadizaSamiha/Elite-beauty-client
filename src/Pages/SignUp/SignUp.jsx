@@ -31,13 +31,12 @@ const SignUp = () => {
             <Helmet>
                 <title>Bistro Boss | SignUp</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-pink-200 pt-20">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">SignUp now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                    <div className="text-center lg:text-left w-1/2">
+                        <h1 className="text-5xl font-bold text-pink-600 ">SignUp now!</h1>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -69,10 +68,10 @@ const SignUp = () => {
                                 {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must less than 12 character</p>}
                             </div>
                             <div className="form-control mt-6">
-                                <input className="btn btn-primary" type="submit" value="Sign Up" />
+                                <input className="btn bg-pink-400" type="submit" value="Sign Up" />
                             </div>
                         </form>
-                        <p><small>Have an Account?</small> <Link to='/login'>Go to Login</Link> </p>
+                        <p className="pl-5"><small className='text-gray-500 font-medium '>Have an Account?</small> <Link to='/login'><span className='text-pink-700'>Go To Login</span></Link> </p>
                         <div className="text-center pb-2">
                             <SocialLogin></SocialLogin>
                         </div>

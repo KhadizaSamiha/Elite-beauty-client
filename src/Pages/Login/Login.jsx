@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
-// import SocialLogin from '../Shared/SocialLogin';
+import SocialLogin from '../Shared/SocialLogin';
 import { AiOutlineEye } from 'react-icons/ai';
 
 const Login = () => {
@@ -30,10 +30,10 @@ const Login = () => {
             <Helmet>
                 <title>Elite Beauty | Login</title>
             </Helmet>
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-pink-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center md:w-1/2 lg:text-left">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
+                        <h1 className="text-5xl font-bold text-pink-600 ">Login now!</h1>
                         <p className="py-6"></p>
                     </div>
                     <div className="card  md:w-1/2 max-w-sm shadow-2xl bg-base-100">
@@ -57,13 +57,13 @@ const Login = () => {
                                 {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must less than 12 character</p>}
                             </div>
                             <div className="form-control mt-6">
-                                <input disabled={false} className="btn btn-primary" type='submit' value='login' />
+                                <input disabled={false} className="btn bg-pink-400" type='submit' value='login' />
                             </div>
                         </form>
-                        <p><small>New Here?</small> <Link to='/signUp'>Create a new account</Link> </p>
-                        {/* <div className='text-center'>
+                        <p className='pl-5'><small className='text-gray-500 font-medium'>New Here?</small> <Link to='/signUp'><span className='text-pink-700'>Create a new account</span></Link> </p>
+                        <div className='text-center mb-2'>
                             <SocialLogin></SocialLogin>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
