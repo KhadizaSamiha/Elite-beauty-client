@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AddClass = () => {
+const ManageClasses = () => {
     return (
         <div>
-           
+            
         </div>
     );
 };
 
-export default AddClass;
+export default ManageClasses;

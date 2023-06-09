@@ -8,6 +8,8 @@ import Classes from "../Pages/classes/Classes";
 import AddClass from "../Pages/DashBoard/AddClass";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../Pages/Shared/Secret";
+import ManageUsers from "../Pages/DashBoard/ManageUsers";
+import ManageClasses from "../Pages/DashBoard/ManageClasses";
 
 
 const router = createBrowserRouter([
@@ -44,7 +46,15 @@ const router = createBrowserRouter([
             {
                 path: 'addClass',
                 element: <AddClass></AddClass>
-            }
+            },
+            {
+                path: 'manageClasses',
+                element: <ManageClasses></ManageClasses>
+            },
+            {
+                path: 'manageUsers',
+                element: <ManageUsers></ManageUsers>
+            },
         ]
     },
 ]);
