@@ -4,13 +4,15 @@
         "teacherName": "Jessica Smith",
         "price": 100,
         "availableSeats": 15,
+        "status": "approved",
         "images": "https://i.ibb.co/JjHxr61/6059037-1861.jpg"
     },
     {
         "className": "Advanced Makeup Techniques",
         "teacherName": "Emily Johnson",
-        "availableSeats": 8,
         "price": 150,
+        "availableSeats": 8,
+        "status": "approved",
         "images": "https://i.ibb.co/vhZhYJD/makeup-brushes-with-whirling-pink-powder.jpg"
     },
     {
@@ -18,6 +20,7 @@
         "teacherName": "Sophia Brown",
         "price": 80,
         "availableSeats": 20,
+        "status": "approved",
         "images": "https://i.ibb.co/TBJQC8s/two-attractive-joyful-models-with-stylish-look-having-fun-beauty-salon.jpg"
     },
     {
@@ -25,6 +28,7 @@
         "teacherName": "Michael Anderson",
         "price": 200,
         "availableSeats": 5,
+        "status": "approved",
         "images": "https://i.ibb.co/4Z6VYrK/fashion-beautiful-girl-with-bright-make-up-among-eustomas.jpg"
     },
     {
@@ -32,6 +36,7 @@
         "teacherName": "Olivia Davis",
         "price": 120,
         "availableSeats": 10,
+        "status": "approved",
         "images": "https://i.ibb.co/fnf0Y1h/beautiful-face-young-woman-with-maroon-makeup-portrait-gorgeous-girl-with-vinous-lips.jpg"
     },
     {
@@ -39,6 +44,7 @@
         "teacherName": "Sarah Wilson",
         "price": 90,
         "availableSeats": 12,
+        "status": "approved",
         "images": "https://i.ibb.co/nw5BJQ3/igor-rand-3-J4-Hyv-V9bw-Y-unsplash.jpg"
     },
     {
@@ -46,6 +52,7 @@
         "teacherName": "Daniel Thompson",
         "price": 180,
         "availableSeats": 6,
+        "status": "approved",
         "images": "https://i.ibb.co/GvjPxpb/amy-shamblen-xw-M61-TPMl-Yk-unsplash.jpg"
     },
     {
@@ -53,6 +60,7 @@
         "teacherName": "Julia Martinez",
         "price": 220,
         "availableSeats": 4,
+        "status": "approved",
         "images": "https://i.ibb.co/nmRD6Tm/noemi-macavei-katocz-zrk7-Wirlxg-M-unsplash.jpg"
     },
     {
@@ -60,6 +68,7 @@
         "teacherName": "Matthew Roberts",
         "price": 160,
         "availableSeats": 7,
+        "status": "approved",
         "images": "https://i.ibb.co/5674xnj/makeup-brush-with-falling-green-powder.jpg"
     },
     {
@@ -67,6 +76,7 @@
         "teacherName": "Amanda White",
         "price": 75,
         "availableSeats": 18,
+        "status": "approved",
         "images": "https://i.ibb.co/vD6RPmT/annie-spratt-77r-QJa2-AKh0-unsplash.jpg"
     },
     {
@@ -74,6 +84,7 @@
         "teacherName": "Robert Johnson",
         "price": 110,
         "availableSeats": 14,
+        "status": "approved",
         "images": "https://i.ibb.co/pPsbFTs/ashley-piszek-cr-Sk-E1-CKQL0-unsplash.jpg"
     },
     {
@@ -81,6 +92,7 @@
         "teacherName": "Sophie Green",
         "price": 190,
         "availableSeats": 5,
+        "status": "approved",
         "images": "https://i.ibb.co/zfBWcGc/romina-farias-Sh-AHFTy-HKQ-unsplash.jpg"
     },
     {
@@ -88,6 +100,7 @@
         "teacherName": "David Harris",
         "price": 230,
         "availableSeats": 3,
+        "status": "approved",
         "images": "https://i.ibb.co/LpFdcr7/qasim-malick-Yh9-Frb-N5-Bts-unsplash.jpg"
     },
     {
@@ -95,6 +108,7 @@
         "teacherName": "Maria Rodriguez",
         "price": 140,
         "availableSeats": 9,
+        "status": "approved",
         "images": "https://i.ibb.co/GvjPxpb/amy-shamblen-xw-M61-TPMl-Yk-unsplash.jpg"
     },
     {
@@ -102,6 +116,7 @@
         "teacherName": "Benjamin Adams",
         "price": 150,
         "availableSeats": 10,
+        "status": "approved",
         "images": "https://i.ibb.co/xjXQJXV/pesce-huang-q1w8-Dt-Gjg7o-unsplash.jpg"
     },
     {
@@ -109,6 +124,7 @@
         "teacherName": "Sophia Thompson",
         "price": 95,
         "availableSeats": 15,
+        "status": "approved",
         "images": "https://i.ibb.co/hmMDb0X/laura-chouette-yxc-Cgz-SB-i-I-unsplash.jpg"
     },
     {
@@ -116,6 +132,7 @@
         "teacherName": "Jennifer Brown",
         "price": 105,
         "availableSeats": 13,
+        "status": "approved",
         "images": "https://i.ibb.co/M57ZJdh/amir-seilsepour-VLJV46h-PLSM-unsplash.jpg"
     },
     {
@@ -123,6 +140,7 @@
         "teacherName": "Michael Walker",
         "price": 210,
         "availableSeats": 6,
+        "status": "approved",
         "images": "https://i.ibb.co/w74tH4f/peter-kalonji-LH74l-RYv-BY4-unsplash.jpg"
     },
     {
@@ -130,6 +148,7 @@
         "teacherName": "Alexandra Davis",
         "price": 200,
         "availableSeats": 8,
+        "status": "approved",
         "images": "https://i.ibb.co/nw5BJQ3/igor-rand-3-J4-Hyv-V9bw-Y-unsplash.jpg"
     },
     {
@@ -137,6 +156,7 @@
         "teacherName": "Emilia Johnson",
         "price": 150,
         "availableSeats": 9,
+        "status": "approved",
         "images": "https://i.ibb.co/vhZhYJD/makeup-brushes-with-whirling-pink-powder.jpg"
     }
 ]

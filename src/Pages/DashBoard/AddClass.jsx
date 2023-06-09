@@ -2,11 +2,34 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
 
+const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 const AddClass = () => {
     const {user } = useContext(AuthContext);
-    console.log(user.displayName);
+   
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => console.log(data);
+    const img_hosting_url = `https://api.imgbb.com/1/upload?key=${img_hosting_token}`;
+
+
+    const onSubmit = data => {
+        const formData = new FormData();
+        formData.append('image', data.image[0])
+
+        fetch(img_hosting_url, {
+            method : "POST",
+            body: formData
+        })
+        .then(res => res.json())
+        .then(imgResponse =>{
+            if(imgResponse.success){
+                const imgUrl = imgResponse.data.display_url;
+                console.log(data, imgUrl);
+                const {name, insName, price, seats } = data;
+                // console.log(name);
+                const newClass = {className : name, teacherName : insName, price : parseFloat(price), availableSeats : seats, image: imgUrl};
+                console.log(newClass);
+            }
+        })
+    };
     console.log(watch("example"));
     return (
         <div className="w-1/2">
@@ -33,14 +56,14 @@ const AddClass = () => {
                         <label className="label">
                             <span className="label-text text-lg font-medium">Instructor Name</span>
                         </label>
-                        <input type="text" defaultValue={user.displayName}  {...register("name", { required: true })} name="insName" placeholder="insName" className="input input-bordered" />
+                        <input type="text" defaultValue={user?.displayName} {...register("insName", { required: true })} name="insName" placeholder="insName" className="input input-bordered" />
                         {errors.insName && <span className="text-red-600">Instructor Name is required</span>}
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text text-lg font-medium">Instructor Email</span>
                         </label>
-                        <input type="Email" defaultValue={user.email} {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered file-input  w-full max-w-xs" />
+                        <input type="Email" defaultValue={user?.email} {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered file-input  w-full max-w-xs" />
                         {errors.email && <span className="text-red-600">Email is required</span>}
                     </div>
                 </div>
@@ -50,7 +73,7 @@ const AddClass = () => {
                             <span className="label-text text-lg font-medium">Available Seats</span>
                         </label>
                         <input type="text"  {...register("seats", { required: true })} name="seats" placeholder="available seats" className="input input-bordered" />
-                        {errors.name && <span className="text-red-600">Seats is required</span>}
+                        {errors.seats && <span className="text-red-600">Seats is required</span>}
                     </div>
                     <div className="form-control">
                         <label className="label">
