@@ -1,23 +1,37 @@
 import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { Helmet } from 'react-helmet-async';
 import SocialLogin from '../Shared/SocialLogin';
 import { AiOutlineEye } from 'react-icons/ai';
+import Swal from 'sweetalert2';
 
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false)
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
+
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
-    const { signIn, googleSignIn, loading } = useContext(AuthContext);
+    const { signIn, loading } = useContext(AuthContext);
 
     const onSubmit = data => {
         console.log(data);
         signIn(data.email, data.password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                Swal.fire({
+                    title: 'User Login Successful.',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+                navigate(from, { replace: true });
             })
             .then(error => {
                 console.log(error);
@@ -51,7 +65,7 @@ const Login = () => {
                                 </label>
                                 <div className='flex justify-between relative'>
                                     <input type="text"  {...register("password", { required: true, minLength: 6, maxLength: 12 })} name="password" placeholder="password" className="input input-bordered" />
-                                   <button><AiOutlineEye className='absolute right-3 top-4 text-lg'></AiOutlineEye></button>
+                                    <button><AiOutlineEye className='absolute right-3 top-4 text-lg'></AiOutlineEye></button>
                                 </div>
                                 {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be at 6 character</p>}
                                 {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must less than 12 character</p>}

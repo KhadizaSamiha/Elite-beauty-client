@@ -14,6 +14,7 @@ const Navbar = () => {
         <li className='font-medium text-lg'><Link to='/instructors'>Instructor</Link></li>
         <li className='font-medium text-lg'><Link to='/classes'>Classes</Link></li>
         <li className='font-medium text-lg'><Link to='/dashboard'>Dashboard</Link></li>
+        <li className='font-medium text-lg'><Link to='/secret'>Secret</Link></li>
     </>
     return (
         <div className="navbar bg-pink-200 fixed z-10  h-[100px] pb-5 lg:px-24">
@@ -37,7 +38,11 @@ const Navbar = () => {
                 user ? <>
                     <div>
                         <button onClick={handleLogOut} className='btn btn-ghost '>LogOut</button>
-                        <p>{user.displayName}</p>
+                        <div className="avatar online">
+                            <div className="w-16 rounded-full">
+                                <img src={user.photoUrl} />
+                            </div>
+                        </div>
                     </div>
                 </> :
                     <>

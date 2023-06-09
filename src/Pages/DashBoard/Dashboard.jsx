@@ -4,6 +4,7 @@ import {AiOutlinePlusCircle, AiFillEdit, AiOutlineHome} from 'react-icons/ai'
 import {FaChalkboardTeacher} from 'react-icons/fa'
 import {BsStars} from 'react-icons/bs'
 const Dashboard = () => {
+    
     return (
         <div>
             <div className="drawer lg:drawer-open">

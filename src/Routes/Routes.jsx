@@ -6,6 +6,8 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Pages/DashBoard/Dashboard";
 import Classes from "../Pages/classes/Classes";
 import AddClass from "../Pages/DashBoard/AddClass";
+import PrivateRoute from "./PrivateRoute";
+import Secret from "../Pages/Shared/Secret";
 
 
 const router = createBrowserRouter([
@@ -29,11 +31,15 @@ const router = createBrowserRouter([
                 path:'/classes',
                 element : <Classes></Classes>
             },
+            {
+                path:'secret',
+                element : <PrivateRoute><Secret></Secret></PrivateRoute>
+            },
         ]
     },
     {
         path:'dashboard',
-        element : <Dashboard></Dashboard>,
+        element : <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
             {
                 path: 'addClass',
