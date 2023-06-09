@@ -14,7 +14,7 @@ const Dashboard = () => {
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
                     <Outlet></Outlet>
                 </div>
-                <div className="drawer-side max-h-[400px]">
+                <div className="drawer-side max-h-[700px]">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 w-80 h-full bg-rose-100 text-base-content">
                         {/* Sidebar content here */}
