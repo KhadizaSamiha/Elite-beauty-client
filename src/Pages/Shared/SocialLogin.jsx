@@ -3,8 +3,10 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
 import Swal from "sweetalert2";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const SocialLogin = () => {
+    const [axiosSecure] = useAxiosSecure();
     const { googleSignIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
@@ -15,17 +17,13 @@ const SocialLogin = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
-                fetch('http://localhost:5000/users', {
-                    method: 'POST',
-                    headers: {
-                        'content-type': 'application/json'
-                    },
-                    body: JSON.stringify(saveUser)
+                axiosSecure('/users', {
+                    user: saveUser
                 })
-                .then(res => res.json())
-                .then(() => {
-                    navigate('/');
-                })
+                    .then(res => {
+                        console.log(res);
+                        navigate(from, { replace: true });
+                    })
             })
     }
     return (

@@ -1,13 +1,18 @@
 import { useQuery } from '@tanstack/react-query'
+import useAxiosSecure from './useAxiosSecure';
 
-const useLoadUsers =() =>{
-    const { isLoading, data: users =[]} = useQuery(
-        { queryKey: ['users', ], 
-        queryFn: async () =>{
-            const res = await fetch('http://localhost:5000/users')
-            return res.json();
-        },
-     })
-     return [users, isLoading]
+const useLoadUsers = () => {
+    const token = localStorage.getItem('access-token');
+    const [axiosSecure] = useAxiosSecure()
+    const { isLoading, data: users = [] } = useQuery(
+        {
+            queryKey: ['users',],
+            queryFn: async () => {
+                const res = await axiosSecure('/users' )
+                console.log('res from axios', res);
+                return res.data;
+            },
+        })
+    return [users, isLoading]
 }
 export default useLoadUsers;
