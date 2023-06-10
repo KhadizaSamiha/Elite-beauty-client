@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import usePendingClass from '../../hooks/usePendingClass';
 import Swal from 'sweetalert2';
+import useClassAll from '../../hooks/useClassAll';
 
 const ManageClasses = () => {
-    const [classesPending] = usePendingClass();
-    console.log(classesPending);
+  
+    const [classesAll] = useClassAll();
+    console.log(classesAll);
 
     const handleMakeApprove = classes => {
         fetch(`http://localhost:5000/classesApprove/${classes._id}`, {
@@ -70,7 +72,7 @@ const ManageClasses = () => {
                     </thead>
                     <tbody>
                         {
-                            classesPending?.map((classes, index) => <tr key={classes._id}>
+                            classesAll?.map((classes, index) => <tr key={classes._id}>
                                 <td>{index + 1}</td>
                                 <td><img className='h-12 w-12 rounded-full' src={classes.image} alt="" /></td>
                                 <td>{classes.className}</td>
@@ -78,8 +80,10 @@ const ManageClasses = () => {
                                 <td>{classes.email}</td>
                                 <td>{classes.availableSeats}</td>
                                 <td>{classes.price}</td>
-                                <td><button onClick={() => handleMakeApprove(classes)} className='btn btn-xs bg-rose-300'>Approve</button></td>
-                                <td>{classes.status == 'denied' ? <button className='btn btn-xs bg-gray-400'>Denied</button>: <button onClick={() => handleMakeDeny(classes)} className='btn btn-xs bg-rose-300'>Deny</button>}</td>
+                                <td>{classes.status == 'approved' || 'deny' ? <button className='btn btn-xs bg-gray-400 disabled'>approved</button>: <button onClick={() => handleMakeApprove(classes)} className='btn btn-xs bg-rose-300'>Approve</button>}</td>
+
+                                <td>{classes.status == 'deny' ? <button className='btn btn-xs bg-gray-400'>Denied</button>: <button onClick={() => handleMakeDeny(classes)} className='btn btn-xs bg-rose-300'>Deny</button>}</td>
+                                
                                 <td><button className='btn btn-xs bg-rose-300'>Feedback</button></td>
                             </tr>)
                         }

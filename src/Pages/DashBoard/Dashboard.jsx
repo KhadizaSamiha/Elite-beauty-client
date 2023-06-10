@@ -4,7 +4,7 @@ import { AiOutlinePlusCircle, AiFillEdit, AiOutlineHome } from 'react-icons/ai'
 import { FaChalkboardTeacher, FaUser, FaListAlt } from 'react-icons/fa'
 import { BsStars } from 'react-icons/bs'
 const Dashboard = () => {
-    const  isAdmin  = true;
+    const  isAdmin  = false;
     return (
         <div>
             <div className="drawer lg:drawer-open">
