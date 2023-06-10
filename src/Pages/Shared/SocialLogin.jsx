@@ -17,7 +17,7 @@ const SocialLogin = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
-                axiosSecure('/users', {
+                axiosSecure.post('/users', {
                     user: saveUser
                 })
                     .then(res => {
