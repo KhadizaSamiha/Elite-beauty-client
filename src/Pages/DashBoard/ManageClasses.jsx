@@ -27,6 +27,28 @@ const ManageClasses = () => {
         })
         .catch(error => console.log(error))
     }
+    const handleMakeDeny = classes =>{
+        fetch(`http://localhost:5000/classesDeny/${classes._id}`, {
+            method:"PATCH"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.modifiedCount > 0){
+                Swal.fire({
+                    title: `class has been denied`,
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                });
+            }
+        })
+        .catch(error => console.log(error))
+
+    } 
     return (
         <div className='w-full'>
             <div className="overflow-x-auto">
@@ -57,7 +79,7 @@ const ManageClasses = () => {
                                 <td>{classes.availableSeats}</td>
                                 <td>{classes.price}</td>
                                 <td><button onClick={() => handleMakeApprove(classes)} className='btn btn-xs bg-rose-300'>Approve</button></td>
-                                <td><button className='btn btn-xs bg-rose-300'>Deny</button></td>
+                                <td>{classes.status == 'denied' ? <button className='btn btn-xs bg-gray-400'>Denied</button>: <button onClick={() => handleMakeDeny(classes)} className='btn btn-xs bg-rose-300'>Deny</button>}</td>
                                 <td><button className='btn btn-xs bg-rose-300'>Feedback</button></td>
                             </tr>)
                         }
