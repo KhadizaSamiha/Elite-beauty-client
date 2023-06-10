@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../Provider/AuthProvider";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import Swal from "sweetalert2";
 
 const img_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 const AddClass = () => {
+    const [axiosSecure] = useAxiosSecure();
     const {user } = useContext(AuthContext);
    
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
@@ -23,10 +26,22 @@ const AddClass = () => {
             if(imgResponse.success){
                 const imgUrl = imgResponse.data.display_url;
                 console.log(data, imgUrl);
-                const {name, insName, price, seats } = data;
-                // console.log(name);
-                const newClass = {className : name, teacherName : insName, price : parseFloat(price), availableSeats : seats, image: imgUrl};
-                console.log(newClass);
+                const {name, insName, price, seats, email } = data;
+                const newClass = {className : name, teacherName : insName, email: email, price : parseFloat(price), availableSeats : seats, image: imgUrl, status : "pending", enrolledStudents : 0};
+                axiosSecure.post('/classes', newClass)
+                .then(data =>{
+                   if(data.data.insertedId){
+                    Swal.fire({
+                        title: 'Class Added Successfully',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    });
+                   }
+                })
             }
         })
     };
