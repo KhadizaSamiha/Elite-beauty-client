@@ -11,7 +11,6 @@ const PopularInstructors = () => {
             })
             .catch(error => console.log(error))
     }, [])
-    console.log(PopularIns);
     return (
         <div >
             <h3 className='text-5xl text-purple-600 text-center m-12 bg-purple-200 h-16 rounded-2xl'>Our Popular Instructors</h3>

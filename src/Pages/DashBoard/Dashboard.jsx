@@ -4,10 +4,12 @@ import { AiOutlinePlusCircle, AiFillEdit, AiOutlineHome } from 'react-icons/ai'
 import { FaChalkboardTeacher, FaUser, FaListAlt } from 'react-icons/fa'
 import { BsStars } from 'react-icons/bs'
 import useAdmin from '../../hooks/useAdmin';
+import useInstructor from '../../hooks/useInstructor';
 
 const Dashboard = () => {
     const [isAdmin] = useAdmin();
-    console.log(isAdmin);
+    const [isInstructor] = useInstructor();
+    
     return (
         <div>
             <div className="drawer lg:drawer-open">
@@ -24,9 +26,9 @@ const Dashboard = () => {
                        
                         
                      {
-                        isAdmin == true ?  <><li><Link to='/dashboard/manageClasses'><FaListAlt />Manage Classes</Link></li>
-                        <li><Link to='/dashboard/manageUsers'><FaUser />Manage Users</Link></li></> :  <><li><Link to='/dashboard/addClass'><AiOutlinePlusCircle className='text-lg' />Add Class</Link></li>
-                        <li><Link to='/dashboard/myClass'><AiFillEdit className='text-lg' />My Classes</Link></li></>
+                        isAdmin ?  (<><li><Link to='/dashboard/manageClasses'><FaListAlt />Manage Classes</Link></li>
+                        <li><Link to='/dashboard/manageUsers'><FaUser />Manage Users</Link></li></>) : (isInstructor ? (<><li><Link to='/dashboard/addClass'><AiOutlinePlusCircle className='text-lg' />Add Class</Link></li>
+                        <li><Link to='/dashboard/myClass'><AiFillEdit className='text-lg' />My Classes</Link></li></>) : (<li>Student</li>)) 
                      }
 
 
