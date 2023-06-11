@@ -4,6 +4,7 @@ import PopularClasses from './PopularClasses';
 import Banner from './Banner';
 import Header from './Header';
 import Footer from '../Shared/Footer';
+import PopularInstructors from './PopularInstructors';
 
 const Home = () => {
     return (
@@ -12,8 +13,9 @@ const Home = () => {
                 <title>Elite Beauty</title>
             </Helmet>
             <Header></Header>
-            <Banner></Banner>
+            <PopularInstructors></PopularInstructors>
             <PopularClasses></PopularClasses>
+            <Banner></Banner>
             <Footer></Footer>
         </div>
     );
