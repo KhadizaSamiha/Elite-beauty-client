@@ -4,53 +4,53 @@ import Swal from 'sweetalert2';
 import useClassAll from '../../hooks/useClassAll';
 
 const ManageClasses = () => {
-  
+
     const [classesAll] = useClassAll();
     console.log(classesAll);
 
     const handleMakeApprove = classes => {
         fetch(`http://localhost:5000/classesApprove/${classes._id}`, {
-            method:"PATCH"
+            method: "PATCH"
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.modifiedCount > 0){
-                Swal.fire({
-                    title: `class has been approved`,
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    }
-                });
-            }
-        })
-        .catch(error => console.log(error))
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: `class has been approved`,
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    });
+                }
+            })
+            .catch(error => console.log(error))
     }
-    const handleMakeDeny = classes =>{
+    const handleMakeDeny = classes => {
         fetch(`http://localhost:5000/classesDeny/${classes._id}`, {
-            method:"PATCH"
+            method: "PATCH"
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-            if(data.modifiedCount > 0){
-                Swal.fire({
-                    title: `class has been denied`,
-                    showClass: {
-                        popup: 'animate__animated animate__fadeInDown'
-                    },
-                    hideClass: {
-                        popup: 'animate__animated animate__fadeOutUp'
-                    }
-                });
-            }
-        })
-        .catch(error => console.log(error))
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        title: `class has been denied`,
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    });
+                }
+            })
+            .catch(error => console.log(error))
 
-    } 
+    }
     return (
         <div className='w-full'>
             <div className="overflow-x-auto">
@@ -80,11 +80,11 @@ const ManageClasses = () => {
                                 <td>{classes.email}</td>
                                 <td>{classes.availableSeats}</td>
                                 <td>{classes.price}</td>
-                                <td>{classes.status == 'approved' || 'deny' ? <button className='btn btn-xs bg-gray-400 disabled'>approved</button>: <button onClick={() => handleMakeApprove(classes)} className='btn btn-xs bg-rose-300'>Approve</button>}</td>
+                                <td>{classes.status == 'approved' || 'deny' ? <button className='btn btn-xs bg-gray-400 disabled'>approved</button> : <button onClick={() => handleMakeApprove(classes)} className='btn btn-xs bg-rose-300'>Approve</button>}</td>
 
-                                <td>{classes.status == 'deny' ? <button className='btn btn-xs bg-gray-400'>Denied</button>: <button onClick={() => handleMakeDeny(classes)} className='btn btn-xs bg-rose-300'>Deny</button>}</td>
-                                
-                                <td><button className='btn btn-xs bg-rose-300'>Feedback</button></td>
+                                <td>{classes.status == 'deny' ? <button className='btn btn-xs bg-gray-400'>Denied</button> : <button onClick={() => handleMakeDeny(classes)} className='btn btn-xs bg-rose-300'>Deny</button>}</td>
+
+                               <td>{classes.status == 'approved' ? <button>Disabled</button>: <button>feed</button>}</td>
                             </tr>)
                         }
                     </tbody>

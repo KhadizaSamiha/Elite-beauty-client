@@ -18,15 +18,20 @@ const Classes = () => {
                         </div>
                     </figure>
                     <div className="card-body">
-                        <div className="flex justify-end ">
-                        <p className="card-title text-sky-600 text-lg">{singleClass?.className}</p>
-                        <p className="card-title text-sky-600 text-lg">{singleClass?.teacherName}</p>
+                        <p className="card-title text-pink-600 text-lg">{singleClass?.teacherName}</p>
+                        <h3 className="card-title text-sky-600 text-xl">{singleClass?.className}</h3>
+                        <p className="card-title text-gray-600">Class-Price : <span className='text-pink-600'>${singleClass?.price}</span></p>
+                        <div className='flex justify-between'>
+                            <div >
+                                {
+                                    singleClass.availableSeats == 0 ? <p className="card-title text-sm text-red-600">Seats : {singleClass?.availableSeats}</p> :
+                                        <p className="card-title text-sm text-gray-600">Seats : <span className='text-sky-700'>{singleClass?.availableSeats}</span></p>
+                                }
+                            </div>
+                            <div>
+                                <button className='btn btn-sm btn-outline border-0 bg-pink-300'>Select</button>
+                            </div>
                         </div>
-                        <h6 className="card-title text-gray-600">Class-Price : ${singleClass?.price}</h6>
-                        {
-                            singleClass.availableSeats == 0 ? <h6 className="card-title text-red-600">Seats : ${singleClass?.availableSeats}</h6>:
-                            <h6 className="card-title text-gray-600">Seats : ${singleClass?.availableSeats}</h6>
-                        }
                     </div>
                 </div>)
             }
