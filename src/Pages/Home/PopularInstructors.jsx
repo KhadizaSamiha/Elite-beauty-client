@@ -23,7 +23,7 @@ const PopularInstructors = () => {
                           <img className='h-24 w-24 rounded-lg' src={ins?.teacherImage}  />
                         </figure>
                         <div className="card-body items-center text-center">
-                          <h2 className="card-title">{ins?.teacherName}</h2>
+                          <h2 className="card-title ">{ins?.teacherName}</h2>
                           <p className='text-purple-600'>{ins.email}</p>
                         </div>
                       </div>)

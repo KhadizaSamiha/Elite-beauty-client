@@ -57,15 +57,15 @@ const Login = () => {
                                     <span className="label-text">Email</span>
                                 </label>
                                 <input type="text"  {...register("email", { required: true })} name="email" placeholder="email" className="input input-bordered" />
-                                {errors.email && <span className="text-red-600">Name is required</span>}
+                                {errors.email && <span className="text-red-600">Email is required</span>}
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
                                 <div className='flex justify-between relative'>
-                                    <input type="text"  {...register("password", { required: true, minLength: 6, maxLength: 12 })} name="password" placeholder="password" className="input input-bordered" />
-                                    <button><AiOutlineEye className='absolute right-3 top-4 text-lg'></AiOutlineEye></button>
+                                    <input type={showPassword ? "text" : "password"}  {...register("password", { required: true, minLength: 6, maxLength: 12 })} name="password" placeholder="password" className="input input-bordered" />
+                                    <button onClick={()=>setShowPassword(!showPassword)}><AiOutlineEye className='absolute right-3 top-4 text-lg'></AiOutlineEye></button>
                                 </div>
                                 {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be at 6 character</p>}
                                 {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must less than 12 character</p>}
