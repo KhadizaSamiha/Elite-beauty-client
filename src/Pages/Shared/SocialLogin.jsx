@@ -17,11 +17,15 @@ const SocialLogin = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
-                axiosSecure.post('/users', {
-                    user: saveUser
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
                 })
-                    .then(res => {
-                        console.log(res);
+                    .then(res => res.json())
+                    .then(() => {
                         navigate(from, { replace: true });
                     })
             })

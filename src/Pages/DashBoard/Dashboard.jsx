@@ -3,8 +3,11 @@ import { Link, Outlet } from 'react-router-dom';
 import { AiOutlinePlusCircle, AiFillEdit, AiOutlineHome } from 'react-icons/ai'
 import { FaChalkboardTeacher, FaUser, FaListAlt } from 'react-icons/fa'
 import { BsStars } from 'react-icons/bs'
+import useAdmin from '../../hooks/useAdmin';
+
 const Dashboard = () => {
-    const  isAdmin  = true;
+    const [isAdmin] = useAdmin();
+    console.log(isAdmin);
     return (
         <div>
             <div className="drawer lg:drawer-open">

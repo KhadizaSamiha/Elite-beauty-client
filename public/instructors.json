@@ -1,0 +1,37 @@
+[
+    {
+      "teacherName": "Jessica Smith",
+      "enrolledStudents": 10,
+      "email": "jessica.smith@example.com",
+      "image": "",
+      "classesTaken": 3
+    },
+    {
+      "teacherName": "Emily Johnson",
+      "enrolledStudents": 5,
+      "email": "emily.johnson@example.com",
+      "image": "",
+      "classesTaken": 3
+    },
+    {
+      "teacherName": "Sophia Brown",
+      "enrolledStudents": 12,
+      "email": "sophia.brown@example.com",
+      "image": "",
+      "classesTaken": 3
+    },
+    {
+      "teacherName": "Michael Anderson",
+      "enrolledStudents": 15,
+      "email": "michael.anderson@example.com",
+      "image": "",
+      "classesTaken": 3
+    },
+    {
+      "teacherName": "Olivia Davis",
+      "enrolledStudents": 18,
+      "email": "olivia.davis@example.com",
+      "image": "",
+      "classesTaken": 3
+    }
+  ]
