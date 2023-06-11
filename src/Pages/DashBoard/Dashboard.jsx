@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { AiOutlinePlusCircle, AiFillEdit, AiOutlineHome } from 'react-icons/ai'
+import { AiOutlinePlusCircle, AiFillEdit, AiOutlineHome,AiOutlineSelect, AiOutlineEnter } from 'react-icons/ai'
 import { FaChalkboardTeacher, FaUser, FaListAlt } from 'react-icons/fa'
 import { BsStars } from 'react-icons/bs'
 import useAdmin from '../../hooks/useAdmin';
@@ -28,7 +28,8 @@ const Dashboard = () => {
                      {
                         isAdmin ?  (<><li><Link to='/dashboard/manageClasses'><FaListAlt />Manage Classes</Link></li>
                         <li><Link to='/dashboard/manageUsers'><FaUser />Manage Users</Link></li></>) : (isInstructor ? (<><li><Link to='/dashboard/addClass'><AiOutlinePlusCircle className='text-lg' />Add Class</Link></li>
-                        <li><Link to='/dashboard/myClass'><AiFillEdit className='text-lg' />My Classes</Link></li></>) : (<li>Student</li>)) 
+                        <li><Link to='/dashboard/myClass'><AiFillEdit className='text-lg' />My Classes</Link></li></>) : (<><li><Link to='/dashboard/mySelectedClasses'><AiOutlineSelect/>My Selected Classes</Link></li>
+                        <li><Link to='/dashboard/myEnrolledClasses'><AiOutlineEnter/>My Enrolled Classes</Link></li></>)) 
                      }
 
 

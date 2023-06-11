@@ -21,7 +21,7 @@ const SocialLogin = () => {
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {
-                        'content-type': 'application/json'
+                        'content-type': 'application/json',
                     },
                     body: JSON.stringify(saveUser)
                 })

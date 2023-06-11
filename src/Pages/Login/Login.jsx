@@ -65,13 +65,13 @@ const Login = () => {
                                 </label>
                                 <div className='flex justify-between relative'>
                                     <input type={showPassword ? "text" : "password"}  {...register("password", { required: true, minLength: 6, maxLength: 12 })} name="password" placeholder="password" className="input input-bordered" />
-                                    <button onClick={()=>setShowPassword(!showPassword)}><AiOutlineEye className='absolute right-3 top-4 text-lg'></AiOutlineEye></button>
+                                    <button onClick={(e)=>{e.preventDefault();setShowPassword(!showPassword)}}><AiOutlineEye className='absolute right-3 top-4 text-lg'></AiOutlineEye></button>
                                 </div>
                                 {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be at 6 character</p>}
                                 {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must less than 12 character</p>}
                             </div>
                             <div className="form-control mt-6">
-                                <input disabled={false} className="btn bg-pink-400" type='submit' value='login' />
+                               <button className='btn bg-pink-400' type='submit'>Login</button>
                             </div>
                         </form>
                         <p className='pl-5'><small className='text-gray-500 font-medium'>New Here?</small> <Link to='/signUp'><span className='text-pink-700'>Create a new account</span></Link> </p>

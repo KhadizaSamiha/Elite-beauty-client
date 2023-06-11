@@ -11,6 +11,8 @@ import Secret from "../Pages/Shared/Secret";
 import ManageUsers from "../Pages/DashBoard/ManageUsers";
 import ManageClasses from "../Pages/DashBoard/ManageClasses";
 import MyClasses from "../Pages/DashBoard/MyClasses";
+import MySelectedClass from "../Pages/DashBoard/MySelectedClass";
+import MyEnrolledClass from "../Pages/DashBoard/MyEnrolledClass";
 
 
 const router = createBrowserRouter([
@@ -44,6 +46,14 @@ const router = createBrowserRouter([
         path:'dashboard',
         element : <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children: [
+            {
+                path: 'mySelectedClasses',
+                element: <MySelectedClass></MySelectedClass>
+            },
+            {
+                path: 'myEnrolledClasses',
+                element: <MyEnrolledClass></MyEnrolledClass>
+            },
             {
                 path: 'addClass',
                 element: <AddClass></AddClass>

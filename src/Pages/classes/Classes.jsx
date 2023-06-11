@@ -1,12 +1,34 @@
 import React from 'react';
 import useClass from '../../hooks/useClass';
 import Card from '../../Components/Card';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
+import Swal from 'sweetalert2';
 
 
 
 const Classes = () => {
+    const [axiosSecure] = useAxiosSecure();
     const [classes] = useClass();
     console.log(classes);
+    const handleSelect = singleClass =>{
+        const {className, teacherName, email, enrolledStudents,availableSeats, images, price, status, teacherImage, _id
+        } = singleClass;
+        const selectedClass = {className, teacherName , email, enrolledStudents,availableSeats, images, price, status, teacherImage, id:_id}
+        axiosSecure.post('/payment', selectedClass)
+        .then(data =>{
+           if(data.data.insertedId){
+            Swal.fire({
+                title: 'Class Selected Successfully',
+                showClass: {
+                    popup: 'animate__animated animate__fadeInDown'
+                },
+                hideClass: {
+                    popup: 'animate__animated animate__fadeOutUp'
+                }
+            });
+           }
+        })
+    }
     return (
         <div className='pt-28 grid grid-cols-3 px-16 bg-cyan-100 space-y-5 gap-4'>
 
@@ -29,7 +51,7 @@ const Classes = () => {
                                 }
                             </div>
                             <div>
-                                <button className='btn btn-sm btn-outline border-0 bg-pink-300'>Select</button>
+                                <button onClick={() => handleSelect(singleClass)} className='btn btn-sm btn-outline border-0 bg-pink-300'>Select</button>
                             </div>
                         </div>
                     </div>
