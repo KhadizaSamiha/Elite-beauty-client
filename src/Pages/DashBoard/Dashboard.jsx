@@ -24,7 +24,7 @@ const Dashboard = () => {
                 </div>
                 <div className="drawer-side max-h-[700px]">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-full bg-rose-100 text-base-content text-pink-600">
+                    <ul className="menu p-4 w-80 h-full bg-rose-100  text-pink-600">
                         {/* Sidebar content here */}
                         <h1 className='m-10 text-pink-600 text-2xl w-full'>Welcome <br/><span className='font-bold'>{user.displayName}</span></h1>
                         <div className="divider bg-pink-300 w-full h-1"></div>

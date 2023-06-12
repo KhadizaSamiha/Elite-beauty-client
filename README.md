@@ -1,4 +1,4 @@
-<h3> Live Link :  </h3>
+<h3> Live Link : https://ass12-2a839.web.app </h3>
 
 <h2>Website Name : Elite Beauty</h2>
 
@@ -6,8 +6,8 @@
 
 
 - This website let's you find to know about Excluvie Makeup Classes
-- Can see many types of maeup classes
-- Availble login and registration form
+- Can see many types of makeup classes
+- Available login and registration form
 - Available Instructor and Classes routes
 
 
@@ -20,4 +20,6 @@
 - React Router
 - Firebase
 - React Icons
-- React Awesome Reveal
+- React Hook Form
+- Axios
+- react-query
