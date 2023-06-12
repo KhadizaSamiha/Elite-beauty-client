@@ -69,8 +69,8 @@ const ManageUsers = () => {
                                 <td>{index + 1}</td>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
-                                <td>{user.role == 'instructor' ? <button className='btn bg-gray-300'>Instructor</button> : <button onClick={() => handleMakeInstructor(user)} className='btn bg-rose-300'>Make Instructor</button>}</td>
-                                <td>{user.role == 'admin' ? <button className='btn bg-gray-300'>Admin</button> : <button onClick={() => handleMakeAdmin(user)} className='btn bg-rose-300'>Make Admin</button>}</td>
+                                <td>{user.role == 'instructor' ? <button className='btn bg-gray-300 disabled'>Instructor</button> : <button onClick={() => handleMakeInstructor(user)} className='btn bg-rose-300'>Make Instructor</button>}</td>
+                                <td>{user.role == 'admin' ? <button className='btn bg-gray-300 disabled'>Admin</button> : <button onClick={() => handleMakeAdmin(user)} className='btn bg-rose-300'>Make Admin</button>}</td>
                             </tr>)
                         }
                     </tbody>

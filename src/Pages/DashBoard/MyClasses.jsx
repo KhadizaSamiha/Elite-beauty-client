@@ -8,7 +8,6 @@ const MyClasses = () => {
         fetch(`http://localhost:5000/classes/${user.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setMyClasses(data)
             })
             .catch(error => console.log(error))

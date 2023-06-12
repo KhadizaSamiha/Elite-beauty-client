@@ -26,10 +26,10 @@ const Banner = () => {
                    <img className="h-72 hover:h-80 mt-5" src="https://i.ibb.co/5TTvBcM/24492893-6940918.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img className="mt-9 hover:h-80" src="https://i.ibb.co/S3CwLVN/10014723-4283914.jpg" alt="" />
+                    <img className="mt-9 hover:h-44 lg:hover:h-80" src="https://i.ibb.co/S3CwLVN/10014723-4283914.jpg" alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                   <img className="mt-9 hover:h-80" src="https://i.ibb.co/VHVY6zC/10014715-4283912.jpg" alt="" />
+                   <img className="mt-9 hover:h-44 lg:hover:h-80" src="https://i.ibb.co/VHVY6zC/10014715-4283912.jpg" alt="" />
                 </SwiperSlide>
             </Swiper>
         </section>

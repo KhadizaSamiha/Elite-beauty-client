@@ -19,7 +19,7 @@ const SignUp = () => {
                 const user = result.user;
                 updateUserProfile(data.name, data.photoURL)
                     .then(() => {
-                        const saveUser = { name: data.name, email: data.email }
+                        const saveUser = { name: data.name, email: data.email , photoUrl : data.photoURL}
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
                             headers: {
@@ -85,9 +85,10 @@ const SignUp = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text"  {...register("password", { required: true, minLength: 6, maxLength: 12 })} name="password" placeholder="password" className="input input-bordered" />
+                                <input type="text"  {...register("password", { required: true, minLength: 6, maxLength: 12,  pattern: /(?=.*[!@#$&*])(?=.*[a-z])/ })} name="password" placeholder="password" className="input input-bordered" />
                                 {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be at 6 character</p>}
                                 {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must less than 12 character</p>}
+                                {errors.password?.type === 'pattern'  && <p className="text-red-600">Password must have one capital letter and special character</p>}
                             </div>
                             <div className="form-control mt-6">
                                 <input className="btn bg-pink-400" type="submit" value="Sign Up" />

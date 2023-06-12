@@ -80,11 +80,11 @@ const ManageClasses = () => {
                                 <td>{classes.email}</td>
                                 <td>{classes.availableSeats}</td>
                                 <td>{classes.price}</td>
-                                <td>{classes.status == 'approved' || 'deny' ? <button className='btn btn-xs bg-gray-400 disabled'>approved</button> : <button onClick={() => handleMakeApprove(classes)} className='btn btn-xs bg-rose-300'>Approve</button>}</td>
+                                <td>{classes.status == 'approved' ? <button className='btn btn-xs bg-gray-400 disabled'>approved</button> : <button onClick={() => handleMakeApprove(classes)} className='btn btn-xs bg-rose-300'>Approve</button>}</td>
 
-                                <td>{classes.status == 'deny' ? <button className='btn btn-xs bg-gray-400'>Denied</button> : <button onClick={() => handleMakeDeny(classes)} className='btn btn-xs bg-rose-300'>Deny</button>}</td>
+                                <td>{classes.status == 'deny' ? <button className='btn btn-xs bg-gray-400 disabled'>Denied</button> : <button onClick={() => handleMakeDeny(classes)} className='btn btn-xs bg-rose-300'>Deny</button>}</td>
 
-                               <td>{classes.status == 'approved' ? <button>Disabled</button>: <button>feed</button>}</td>
+                               <td>{classes.status == 'deny' ? <button  className='btn btn-xs btn-warning btn-outline'>FeedBack</button>: <button className='btn btn-xs disabled'>Feedback</button>}</td>
                             </tr>)
                         }
                     </tbody>

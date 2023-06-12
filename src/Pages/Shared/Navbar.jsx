@@ -13,8 +13,7 @@ const Navbar = () => {
         <li className='font-medium text-lg'><Link to='/'>Home</Link></li>
         <li className='font-medium text-lg'><Link to='/instructor'>Instructor</Link></li>
         <li className='font-medium text-lg'><Link to='/classes'>Classes</Link></li>
-        <li className='font-medium text-lg'><Link to='/dashboard'>Dashboard</Link></li>
-        <li className='font-medium text-lg'><Link to='/secret'>Secret</Link></li>
+        {user && <li className='font-medium text-lg'><Link to='/dashboard'>Dashboard</Link></li>}
     </>
     return (
         <div className="navbar bg-pink-200 fixed z-10  h-[100px] pb-5 lg:px-24">
@@ -27,7 +26,7 @@ const Navbar = () => {
                         {navOptions}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-2xl"><div className='border border-1 px-8 py-4 border-pink-600'>Elite Beauty</div></a>
+                <a className="btn btn-ghost normal-case text-sm lg:text-2xl"><div className='border border-1 px-8 py-4 border-pink-600'>Elite Beauty</div></a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -46,7 +45,7 @@ const Navbar = () => {
                     </div>
                 </> :
                     <>
-                        <li><Link to='/login'>Login</Link></li>
+                        <li className='btn btn-outline border-pink-700 text-pink-700'><Link to='/login'>Login</Link></li>
                     </>
             }
         </div>

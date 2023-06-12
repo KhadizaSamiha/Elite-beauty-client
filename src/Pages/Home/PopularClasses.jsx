@@ -20,7 +20,7 @@ const PopularClasses = () => {
                 <h3 className="text-xl mb-10 text-purple-800">This is our popular class section</h3>
             </Fade>
             <Bounce>
-                <div className="grid grid-cols-3 h-1/2  gap-5 ml-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 h-1/2 gap-2 lg:gap-5 lg:ml-8 ml-12">
                     {
                         PopularClasses?.slice(0, 6).map(popular => <div key={popular._id} className="card w-80 rounded-full bg-purple-200 shadow-xl">
                             <figure><img className="h-24 w-24 mt-5 rounded-full" src={popular.images} /></figure>
