@@ -42,7 +42,7 @@ const MySelectedClass = () => {
                                 <td>{classes.email}</td>
                                 <td>{classes.availableSeats}</td>
                                 <td>{classes.price}</td>
-                               <td><Link to={`/dashboard/payment/${classes._id}`}><button className='btn btn-sm bg-purple-300'>Pay</button></Link></td>
+                                <td><Link to={{pathname: `/dashboard/payment/${classes._id}`, state:{ classes }}}><button className='btn btn-sm bg-purple-300'>Pay</button></Link></td>
                             </tr>)
                         }
                     </tbody>

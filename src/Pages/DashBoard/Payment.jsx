@@ -4,7 +4,8 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 
 const stripePromise = loadStripe(import.meta.env.VITE_Payment_Gateway_Pk);
-const Payment = () => {
+const Payment = ({classes}) => {
+    console.log(classes);
     return (
         <div>
             <h2>Payment Page</h2>
