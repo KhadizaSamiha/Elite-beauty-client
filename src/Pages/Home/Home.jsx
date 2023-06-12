@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import PopularClasses from './PopularClasses';
 import Banner from './Banner';
 import Header from './Header';
-import Footer from '../Shared/Footer';
 import PopularInstructors from './PopularInstructors';
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
             <PopularInstructors></PopularInstructors>
             <PopularClasses></PopularClasses>
             <Banner></Banner>
-            <Footer></Footer>
         </div>
     );
 };

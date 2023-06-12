@@ -1,25 +1,35 @@
 import React from 'react';
-
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer p-10 bg-pink-200 text-base-content">
+            <footer className="footer p-10 bg-pink-200 text-base-content mt-10">
                 <div>
-                    <span className="footer-title">Services</span>
-                    <a className="link link-hover">Makeup</a>
-                    <a className="link link-hover">Hair</a>
-                    <a className="link link-hover">Facial</a>
-                    <a className="link link-hover">Nail</a>
+                    <span className="footer-title text-pink-900">Services</span>
+                    <a className="link link-hover text-pink-700">Makeup</a>
+                    <a className="link link-hover text-pink-700">Hair</a>
+                    <a className="link link-hover text-pink-700">Facial</a>
+                    <a className="link link-hover text-pink-700">Nail</a>
                 </div>
                 <div>
-                    <span className="footer-title">Company</span>
-                    <a className="link link-hover">About us</a>
-                    <a className="link link-hover">Contact</a>
-                    <a className="link link-hover">Jobs</a>
-                    <a className="link link-hover">Press kit</a>
+                    <span className="footer-title text-pink-900">Company</span>
+                    <a className="link link-hover text-pink-700">About us</a>
+                    <a className="link link-hover text-pink-700">Contact</a>
+                    <a className="link link-hover text-pink-700">Jobs</a>
+                    <a className="link link-hover text-pink-700">Press kit</a>
                 </div>
                 <div>
-                <a className="btn btn-ghost normal-case text-3xl"><div className='border border-1 px-8 py-4 border-pink-600'>Elite Beauty</div></a>
+                    <a className="btn btn-ghost normal-case text-3xl"><div className='border border-1 px-8 py-4 border-pink-600'>Elite Beauty</div></a>
+                    <div className='ml-10 mt-10'>
+                        <h4 className='text-lg font-medium  text-pink-700'>Follow Us On</h4>
+                        <div className='flex space-x-2'>
+                            <Link><FaFacebook className='text-pink-500' /></Link>
+                            <Link><FaTwitter className='text-pink-500' /></Link>
+                            <Link><FaInstagram className='text-pink-500' /></Link>
+                            <Link><FaLinkedin className='text-pink-500' /></Link>
+                        </div>
+                    </div>
                 </div>
             </footer>
         </div>
