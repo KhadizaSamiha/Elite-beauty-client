@@ -13,6 +13,8 @@ import ManageClasses from "../Pages/DashBoard/ManageClasses";
 import MyClasses from "../Pages/DashBoard/MyClasses";
 import MySelectedClass from "../Pages/DashBoard/MySelectedClass";
 import MyEnrolledClass from "../Pages/DashBoard/MyEnrolledClass";
+import Instructor from "../Pages/Instructor/Instructor";
+import Payment from "../Pages/DashBoard/Payment";
 
 
 const router = createBrowserRouter([
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path:'/classes',
                 element : <Classes></Classes>
+            },
+            {
+                path:'/instructor',
+                element :<Instructor></Instructor>
             },
             {
                 path:'secret',
@@ -69,6 +75,10 @@ const router = createBrowserRouter([
             {
                 path: 'manageUsers',
                 element: <ManageUsers></ManageUsers>
+            },
+            {
+                path: 'payment/:id',
+                element:<Payment></Payment>
             },
         ]
     },

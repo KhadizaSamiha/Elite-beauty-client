@@ -11,7 +11,7 @@ const Navbar = () => {
     }
     const navOptions = <>
         <li className='font-medium text-lg'><Link to='/'>Home</Link></li>
-        <li className='font-medium text-lg'><Link to='/instructors'>Instructor</Link></li>
+        <li className='font-medium text-lg'><Link to='/instructor'>Instructor</Link></li>
         <li className='font-medium text-lg'><Link to='/classes'>Classes</Link></li>
         <li className='font-medium text-lg'><Link to='/dashboard'>Dashboard</Link></li>
         <li className='font-medium text-lg'><Link to='/secret'>Secret</Link></li>
