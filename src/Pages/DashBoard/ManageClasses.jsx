@@ -9,7 +9,7 @@ const ManageClasses = () => {
     console.log(classesAll);
 
     const handleMakeApprove = classes => {
-        fetch(`http://localhost:5000/classesApprove/${classes._id}`, {
+        fetch(`https://ass12-server-one.vercel.app/classesApprove/${classes._id}`, {
             method: "PATCH"
         })
             .then(res => res.json())
@@ -30,7 +30,7 @@ const ManageClasses = () => {
             .catch(error => console.log(error))
     }
     const handleMakeDeny = classes => {
-        fetch(`http://localhost:5000/classesDeny/${classes._id}`, {
+        fetch(`https://ass12-server-one.vercel.app/classesDeny/${classes._id}`, {
             method: "PATCH"
         })
             .then(res => res.json())

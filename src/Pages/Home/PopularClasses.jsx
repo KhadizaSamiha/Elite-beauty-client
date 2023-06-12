@@ -4,7 +4,7 @@ import { Bounce, Fade, Slide } from "react-awesome-reveal";
 const PopularClasses = () => {
     const [PopularClasses, setPopularClasses] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/classesPopular')
+        fetch('https://ass12-server-one.vercel.app/classesPopular')
             .then(res => res.json())
             .then(data => {
                 setPopularClasses(data)

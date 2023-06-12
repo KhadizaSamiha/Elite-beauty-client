@@ -5,7 +5,7 @@ const useClass = () => {
         {
             queryKey: ['classes',],
             queryFn: async () => {
-                const res = await fetch(`http://localhost:5000/classes?status='approved'`)
+                const res = await fetch(`https://ass12-server-one.vercel.app/classes?status='approved'`)
                 return res.json();
             },
         })

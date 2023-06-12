@@ -1,17 +1,40 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaTrashAlt } from 'react-icons/fa'
+import Swal from 'sweetalert2';
 
 const MySelectedClass = () => {
     const [selectedClass, setSelectedClass] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/paymentSelected')
+        fetch('https://ass12-server-one.vercel.app/paymentSelected')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setSelectedClass(data)
             })
             .catch(error => console.log(error))
     }, [])
+    const handleDelete = classes =>{
+        fetch(`https://ass12-server-one.vercel.app/paymentDelete/${classes._id}`, {
+            method: "DELETE"
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.deletedCount > 0){
+                
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Class deleted successfully',
+                    showConfirmButton: false,
+                    timer: 1500
+                  })
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
     return (
         <div>
             <h2 className='text-3xl text-purple-700'>My Selected Class</h2>
@@ -42,6 +65,7 @@ const MySelectedClass = () => {
                                 <td>{classes.email}</td>
                                 <td>{classes.availableSeats}</td>
                                 <td>{classes.price}</td>
+                                <td><button onClick={() => handleDelete(classes)} className='bg-red-500 p-3 text-white rounded-lg'><FaTrashAlt/></button></td>
                                 <td><Link to={{pathname: `/dashboard/payment/${classes._id}`, state:{ classes }}}><button className='btn btn-sm bg-purple-300'>Pay</button></Link></td>
                             </tr>)
                         }

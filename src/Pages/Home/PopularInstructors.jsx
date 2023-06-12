@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Marquee from "react-fast-marquee";
+
 const PopularInstructors = () => {
     const [PopularIns, setPopularIns] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/classesAll')
+        fetch('https://ass12-server-one.vercel.app/classesAll')
             .then(res => res.json())
             .then(data => {
                 setPopularIns(data)
